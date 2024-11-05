@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-menu {
+    border-radius: 8px;
+    border: 1px solid #EAECF0;
+    background: #FFF;
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+    padding: 5px 6px;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    gap: 2px;
+}
+
+.custom-menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-menu::-webkit-scrollbar-thumb {
+    background-color: #EAECF0;
+    border-radius: 9999px;
+}
+
+.custom-menu::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.custom-menu::-webkit-scrollbar-track {
+    background-color: #FFF;
+}
+
+.custom-menu .custom-menu-item {
+    display: grid;
+    grid-template-columns: 1fr 24px;
+    align-items: center;
+    gap: 2px;
+    justify-content: space-between;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.custom-menu .custom-menu-item label {
+    font-size: 16px;
+    line-height: 24px;
+    color: #414141;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.custom-menu .custom-menu-item input {
+    border-radius: 4px;
+    accent-color: #005BAA;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+}
+
+.custom-menu .custom-menu-item input:checked,
+.custom-menu .custom-menu-item:hover input {
+    opacity: 1;
+}
+
+.custom-menu .custom-menu-item:hover,
+.custom-menu .custom-menu-item:has(input:checked) {
+    background: #EDF7FF;
+}
+
+.custom-menu .custom-menu-item:hover label,
+.custom-menu .custom-menu-item:has(input:checked) label {
+    color: #005BAA;
+}
+
+.field-box {
+    border-radius: 8px;
+    border: 1px solid #D4EBFC;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    padding: 8px 12px;
+    height: 40px;
+    background: #FFF;
+
+    background-image: url('../images/chevron-down.svg');
+    background-position: center right 10px;
+    background-repeat: no-repeat;
+}
+
+.field-box .input-field {
+    font-size: 16px;
+    line-height: 24px;
+    outline: none;
+}
+
+.field-box .input-field::placeholder {
+    color: #A0A0A0;
+}
