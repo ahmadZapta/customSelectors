@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const singleSelector = document.querySelectorAll(".data-selector-wrapper");
-    console.log(singleSelector);
 
     singleSelector.forEach(wrapper => {
         const budgetInput = wrapper.querySelector(".selector-input-field");
@@ -81,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 }
             }
-            console.log(selectedServices);
         }
 
         function updateServicesField() {
